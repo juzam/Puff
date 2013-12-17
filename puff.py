@@ -89,7 +89,7 @@ class Puffer(object):
         else:
             self.log('Login failed for %s' % self.username)
             
-    def post(self, url):
+    def post(self, url, title, description):
         if self.logged_in != True:
             self.log('Must be logged in')
             return
