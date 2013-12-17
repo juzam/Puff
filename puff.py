@@ -18,8 +18,8 @@ import mechanize
 
 default_config = """
 [huffduffer]
-username = yourusername
-password = yourpassword
+username = defaultuser
+password = defaultpassword
 """
 
 class Puffer(object):
@@ -99,7 +99,8 @@ class Puffer(object):
         self.br.open('http://huffduffer.com/add')
         self.br.select_form(nr=1)
         self.br['bookmark[url]'] = url
-        self.br['bookmark[title]'] = 'Puffed Audio'
+        self.br['bookmark[title]'] = title
+        self.br['bookmark[description]'] = description
         
         self.br.submit()
 
@@ -118,8 +119,10 @@ class Puffer(object):
 if __name__ == '__main__':
     try:
         url = sys.argv[1]
+        title = sys.argv[2]
+        description = sys.argv[3]
     except:
-        print 'Please specify a url to Puff'
+        print 'Please specify a url to Puff, title and description'
         exit()
 
     puffer = Puffer()
