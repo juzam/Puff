@@ -126,4 +126,4 @@ if __name__ == '__main__':
         exit()
 
     puffer = Puffer()
-    puffer.post(url)
+    puffer.post(url, title, description)
