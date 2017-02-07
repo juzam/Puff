@@ -4,14 +4,11 @@ A python API wrapper that enables posting audio to Huffduffer.
 
 Can also be used as a simple command-line client.
 
-Bear in mind that this sends yuor username/password via http, there isn't any https protected Huffduffer login page
-AFAIK -- J.
-
 ## Usage
 
 ### Command line
 
-    puff.py http://example.com/audio.mp3
+    puff.py http://example.com/audio.mp3 title description
 
 
 ### Module

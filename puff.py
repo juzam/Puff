@@ -76,7 +76,7 @@ class Puffer(object):
         
         self.log('Logging in %s' % self.username)
 
-        self.br.open('http://huffduffer.com/login') 
+        self.br.open('https://huffduffer.com/login') 
         self.br.select_form(nr=1)
 
         self.br['login[username]'] = self.username
